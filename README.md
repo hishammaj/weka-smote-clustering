@@ -4,19 +4,32 @@ i want to add something like,
 
 /*
 {
- SimpleKMeans kmeans = new SimpleKMeans();
- kmeans.setNumClusters(2);
- kmeans.buildClusterer(sample);
- weka.core.Instances[] datasets = new weka.core.Instances[kmeans.getNumClusters()]; 
- for (int i = 0; i < datasets.length; i++) 
-  {
-  datasets[i] = new Instances(sample, 0);
+
+  SimpleKMeans kmeans = new SimpleKMeans();
+ 
+  kmeans.setNumClusters(2);
+
+  kmeans.buildClusterer(sample);
+
+  weka.core.Instances[] datasets = new weka.core.Instances[kmeans.getNumClusters()]; 
+
+   for (int i = 0; i < datasets.length; i++) 
+
+   {
+ 
+   datasets[i] = new Instances(sample, 0);
+ 
+   }
+
+   for (Instance inst : sample)
+
+   {
+ 
+   datasets[(int)kmeans.clusterInstance(inst)].add(inst);
+
+   }
+
   }
- for (Instance inst : sample)
-  {
-  datasets[(int)kmeans.clusterInstance(inst)].add(inst);
-  }
-}
 
 */
 
