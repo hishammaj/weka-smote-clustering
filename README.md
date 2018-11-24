@@ -1,5 +1,5 @@
 # weka-smote-clustering
-can you please help me ,i want to cluster the subdataset  (sample)  fter the line 549 {	sample.add(instance);  }
+can you please help me ,i want to cluster the subdataset  (sample)  after the line 549 {	sample.add(instance);  }
 i want to add something like,
 
 /*
